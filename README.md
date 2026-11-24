@@ -21,9 +21,7 @@
 <!-- ═══════════════════════ ABOUT ME ═══════════════════════ -->
 ## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> About Me
 
-<table>
-<tr>
-<td width="60%" valign="top">
+<img align="right" width="340" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" alt="coding"/>
 
 ```ts
 const arjun = {
@@ -37,12 +35,7 @@ const arjun = {
 };
 ```
 
-</td>
-<td width="40%" align="center" valign="middle">
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="100%" alt="coding"/>
-</td>
-</tr>
-</table>
+<br clear="right"/>
 
 ---
 
