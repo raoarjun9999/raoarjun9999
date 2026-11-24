@@ -1,6 +1,6 @@
 <!-- ═══════════════════════ ANIMATED HEADER ═══════════════════════ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=220&section=header&text=Hey,%20I'm%20Arjun%20Rao&fontSize=52&fontColor=ffffff&fontAlignY=36&animation=twinkling&desc=Full-Stack%20Developer%20•%20Data%20%26%20AI%20Enthusiast&descAlignY=58&descSize=18" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=220&section=header&text=Arjun%20Rao&fontSize=60&fontColor=ffffff&fontAlignY=36&animation=twinkling&desc=Full%20Stack%20Developer%20%7C%20Data%20and%20AI%20Enthusiast&descAlignY=58&descSize=18" width="100%"/>
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@ const arjun = {
 
 </td>
 <td width="40%" align="center" valign="middle">
-  <img src="https://raw.githubusercontent.com/SamirPaulb/SamirPaulb/main/assets/images/coding-freak.gif" width="100%" alt="coding"/>
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="100%" alt="coding"/>
 </td>
 </tr>
 </table>
