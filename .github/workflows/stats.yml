@@ -1,0 +1,155 @@
+# Generates real GitHub stats (public + private repos) into the "stats" branch
+name: Generate GitHub Stats
+
+on:
+  schedule:
+    - cron: "30 0 * * *"   # daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build stats SVGs
+        env:
+          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
+        run: |
+          cat > gen.py <<'PY'
+          import os, json, sys, datetime, urllib.request
+          from html import escape
+          
+          ACCENT = "#36BCF7"
+          EXCLUDE = {"Jupyter Notebook", "Dockerfile", "Makefile", "Batchfile", "Procfile", "Shell", "PowerShell"}
+          OUT = os.environ.get("OUT_DIR", "dist")
+          
+          
+          def gql(query, variables=None):
+              req = urllib.request.Request(
+                  "https://api.github.com/graphql",
+                  data=json.dumps({"query": query, "variables": variables or {}}).encode(),
+                  headers={"Authorization": "bearer " + os.environ["GH_TOKEN"], "Content-Type": "application/json"},
+              )
+              res = json.load(urllib.request.urlopen(req))
+              if "errors" in res:
+                  sys.exit(json.dumps(res["errors"], indent=2))
+              return res["data"]
+          
+          
+          def fetch():
+              repos, cursor = [], None
+              while True:
+                  v = gql("""query($c:String){ viewer {
+                      login name createdAt followers { totalCount }
+                      contributionsCollection { contributionYears }
+                      repositories(first:100, after:$c, ownerAffiliations:OWNER, isFork:false) {
+                        totalCount pageInfo { hasNextPage endCursor }
+                        nodes { stargazerCount languages(first:20) { edges { size node { name color } } } }
+                      } } }""", {"c": cursor})["viewer"]
+                  repos += v["repositories"]["nodes"]
+                  if not v["repositories"]["pageInfo"]["hasNextPage"]:
+                      break
+                  cursor = v["repositories"]["pageInfo"]["endCursor"]
+          
+              totals = {"contrib": 0, "commits": 0, "prs": 0}
+              for y in v["contributionsCollection"]["contributionYears"]:
+                  c = gql("""query($f:DateTime,$t:DateTime){ viewer { contributionsCollection(from:$f,to:$t) {
+                        contributionCalendar { totalContributions }
+                        totalCommitContributions restrictedContributionsCount totalPullRequestContributions } } }""",
+                          {"f": f"{y}-01-01T00:00:00Z", "t": f"{y}-12-31T23:59:59Z"})["viewer"]["contributionsCollection"]
+                  totals["contrib"] += c["contributionCalendar"]["totalContributions"]
+                  totals["commits"] += c["totalCommitContributions"] + c["restrictedContributionsCount"]
+                  totals["prs"] += c["totalPullRequestContributions"]
+          
+              langs = {}
+              for r in repos:
+                  for e in r["languages"]["edges"]:
+                      n = e["node"]["name"]
+                      if n in EXCLUDE:
+                          continue
+                      langs.setdefault(n, [0, e["node"]["color"] or "#8b949e"])[0] += e["size"]
+          
+              years = datetime.date.today().year - int(v["createdAt"][:4])
+              return {
+                  "name": (v["name"] or v["login"]).split()[0],
+                  "stats": [
+                      ("Total Contributions", totals["contrib"]),
+                      ("Total Commits", totals["commits"]),
+                      ("Repositories", v["repositories"]["totalCount"]),
+                      ("Pull Requests", totals["prs"]),
+                      ("Stars Earned", sum(r["stargazerCount"] for r in repos)),
+                      ("Followers", v["followers"]["totalCount"]),
+                      ("Years on GitHub", years),
+                  ],
+                  "langs": langs,
+              }
+          
+          
+          STYLE = """<style>
+            .t{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:%s}
+            .l{font:400 14px 'Segoe UI',Ubuntu,sans-serif;fill:#c9d1d9}
+            .v{font:700 15px 'Segoe UI',Ubuntu,sans-serif;fill:#ffffff}
+            .s{font:400 13px 'Segoe UI',Ubuntu,sans-serif;fill:#c9d1d9}
+            .f{opacity:0;animation:fade .6s ease-out forwards}
+            .g{animation:grow 1.2s ease-out forwards;transform:scaleX(0);transform-origin:left}
+            @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+            @keyframes grow{to{transform:scaleX(1)}}
+          </style>""" % ACCENT
+          
+          
+          def card(w, h, body):
+              return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">{STYLE}'
+                      f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="10" fill="#0d1117" stroke="#30363d"/>{body}</svg>')
+          
+          
+          def stats_svg(d):
+              items = [(k, v) for k, v in d["stats"] if v > 0][:6]
+              rows, top = "", 64 + max(0, 5 - len(items)) * 13
+              for i, (k, v) in enumerate(items):
+                  y = top + i * 27
+                  rows += (f'<g class="f" style="animation-delay:{150 + i*120}ms">'
+                           f'<rect x="25" y="{y-11}" width="4" height="14" rx="2" fill="{ACCENT}"/>'
+                           f'<text x="40" y="{y}" class="l">{escape(k)}</text>'
+                           f'<text x="395" y="{y}" class="v" text-anchor="end">{v:,}</text></g>')
+              h = 62 + len(items) * 27 + 8
+              return card(420, max(h, 200), f'<text x="25" y="34" class="t">{escape(d["name"])}\'s GitHub Stats</text>{rows}')
+          
+          
+          def langs_svg(d):
+              top = sorted(d["langs"].items(), key=lambda x: -x[1][0])[:8]
+              total = sum(v[0] for _, v in top) or 1
+              bar, x = "", 25
+              for n, (s, c) in top:
+                  w = 370 * s / total
+                  bar += f'<rect x="{x:.2f}" y="52" width="{w:.2f}" height="10" fill="{c}"/>'
+                  x += w
+              bar = (f'<clipPath id="r"><rect x="25" y="52" width="370" height="10" rx="5"/></clipPath>'
+                     f'<g clip-path="url(#r)"><g class="g">{bar}</g></g>')
+              rows = ""
+              for i, (n, (s, c)) in enumerate(top):
+                  cx, cy = 25 + (i % 2) * 190, 92 + (i // 2) * 26
+                  rows += (f'<g class="f" style="animation-delay:{400 + i*100}ms">'
+                           f'<circle cx="{cx+5}" cy="{cy-5}" r="5" fill="{c}"/>'
+                           f'<text x="{cx+16}" y="{cy}" class="s">{escape(n)} <tspan fill="#8b949e">{100*s/total:.1f}%</tspan></text></g>')
+              h = 92 + ((len(top) + 1) // 2) * 26
+              return card(420, max(h, 200), f'<text x="25" y="34" class="t">Most Used Languages</text>{bar}{rows}')
+          
+          
+          if __name__ == "__main__":
+              data = json.load(open(sys.argv[1])) if len(sys.argv) > 1 else fetch()
+              os.makedirs(OUT, exist_ok=True)
+              open(f"{OUT}/stats.svg", "w").write(stats_svg(data))
+              open(f"{OUT}/languages.svg", "w").write(langs_svg(data))
+              print("ok", [s for s in data["stats"]], len(data["langs"]))
+          PY
+          python3 gen.py
+
+      - name: Push to stats branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: stats
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
