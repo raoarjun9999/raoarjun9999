@@ -1,18 +1,122 @@
-# 💫 About Me:
-I'm a Software Developer passionate about building modern, scalable, and user-friendly web applications.<br><br>- 💻 Currently working on React, TypeScript, .NET, and Microsoft Fabric solutions.<br>- 🚀 Experienced in developing full-stack applications, dashboards, and business automation tools.<br>- 📊 Interested in Power BI, Microsoft Fabric, and AI-powered applications.<br>- 🏆 Hackathon winner with multiple national-level hackathon achievements.<br>- 🌱 Always learning new technologies and exploring innovative solutions.<br>- 🤝 Open to collaborating on interesting projects and connecting with developers.
+<!-- ═══════════════════════ ANIMATED HEADER ═══════════════════════ -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=220&section=header&text=Hey,%20I'm%20Arjun%20Rao&fontSize=52&fontColor=ffffff&fontAlignY=36&animation=twinkling&desc=Full-Stack%20Developer%20•%20Data%20%26%20AI%20Enthusiast&descAlignY=58&descSize=18" width="100%"/>
+</p>
 
+<p align="center">
+  <a href="https://github.com/raoarjun9999">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=800&color=36BCF7&center=true&vCenter=true&multiline=false&width=650&height=45&lines=React+%7C+TypeScript+%7C+.NET+%7C+Microsoft+Fabric;Building+scalable%2C+user-friendly+web+apps+%F0%9F%9A%80;Power+BI+dashboards+%26+business+automation+%F0%9F%93%8A;%F0%9F%8F%86+National-level+Hackathon+Winner;Always+learning%2C+always+shipping+%E2%9A%A1" alt="Typing SVG" />
+  </a>
+</p>
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/https://www.instagram.com/arjunrao9999) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://linkedin.com/in/arjunrao9999) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:raoarjun0176@gmail.com) 
-
-# 💻 Tech Stack:
-![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![Angular.js](https://img.shields.io/badge/angular.js-%23E23237.svg?style=for-the-badge&logo=angularjs&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.shion.dev/api?username=raoarjun9999&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://streak-stats.demolab.com/?user=raoarjun9999&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=raoarjun9999&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+<p align="center">
+  <a href="https://linkedin.com/in/arjunrao9999"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="https://www.instagram.com/arjunrao9999"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/></a>
+  <a href="mailto:raoarjun0176@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <img src="https://komarev.com/ghpvc/?username=raoarjun9999&style=for-the-badge&color=36BCF7&label=PROFILE+VIEWS"/>
+</p>
 
 ---
-[![](https://komarev.com/ghpvc/?username=raoarjun9999&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+<!-- ═══════════════════════ ABOUT ME ═══════════════════════ -->
+## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> About Me
+
+<table>
+<tr>
+<td width="60%" valign="top">
+
+```ts
+const arjun = {
+  role:        "Software Developer",
+  currentStack: ["React", "TypeScript", ".NET", "Microsoft Fabric"],
+  building:    ["Full-stack apps", "Dashboards", "Business automation"],
+  interests:   ["Power BI", "Microsoft Fabric", "AI-powered apps"],
+  achievements: "🏆 Multiple national-level hackathon wins",
+  mindset:     "Always learning. Always exploring.",
+  openTo:      "Collaborating on interesting projects 🤝",
+};
+```
+
+</td>
+<td width="40%" align="center" valign="middle">
+  <img src="https://raw.githubusercontent.com/SamirPaulb/SamirPaulb/main/assets/images/coding-freak.gif" width="100%" alt="coding"/>
+</td>
+</tr>
+</table>
+
+---
+
+<!-- ═══════════════════════ TECH STACK ═══════════════════════ -->
+## ⚡ Tech Stack
+
+<h4 align="center">💻 Languages</h4>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=cs,java,js,ts,py&theme=dark" />
+</p>
+
+<h4 align="center">🎨 Frontend & Mobile</h4>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,nextjs,angular,tailwind,bootstrap,vite&theme=dark" />
+</p>
+
+<h4 align="center">⚙️ Backend</h4>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=dotnet,nodejs&theme=dark" />
+</p>
+
+<h4 align="center">🗄️ Databases & BaaS</h4>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb,firebase,supabase&theme=dark" />
+</p>
+
+<h4 align="center">☁️ Deploy & Data</h4>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=vercel,netlify&theme=dark" />
+  <br/><br/>
+  <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black"/>
+  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Microsoft_Fabric-0078D4?style=for-the-badge&logo=microsoft&logoColor=white"/>
+</p>
+
+---
+
+<!-- ═══════════════════════ GITHUB STATS ═══════════════════════ -->
+## 📊 GitHub Analytics
+
+<p align="center">
+  <img height="170" src="https://github-readme-stats.shion.dev/api?username=raoarjun9999&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&show_icons=true&bg_color=0d1117&title_color=36BCF7&icon_color=36BCF7" />
+  <img height="170" src="https://github-readme-stats.shion.dev/api/top-langs/?username=raoarjun9999&theme=tokyonight&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=36BCF7" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=raoarjun9999&theme=tokyonight&hide_border=true&background=0d1117&ring=36BCF7&fire=FF6B6B&currStreakLabel=36BCF7" />
+</p>
+
+<p align="center">
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=raoarjun9999&bg_color=0d1117&color=36BCF7&line=36BCF7&point=ffffff&area=true&area_color=1f6feb&hide_border=true&custom_title=Contribution%20Activity" />
+</p>
+
+---
+
+<!-- ═══════════════════════ CONTRIBUTION SNAKE ═══════════════════════ -->
+## 🐍 Contribution Snake
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/raoarjun9999/raoarjun9999/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/raoarjun9999/raoarjun9999/output/github-snake.svg" />
+    <img alt="contribution snake" src="https://raw.githubusercontent.com/raoarjun9999/raoarjun9999/output/github-snake-dark.svg" />
+  </picture>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=8B949E&center=true&vCenter=true&width=500&lines=Thanks+for+stopping+by!+%E2%9C%A8;Let's+build+something+awesome+together+%F0%9F%A4%9D" />
+</p>
+
+<!-- ═══════════════════════ ANIMATED FOOTER ═══════════════════════ -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer&animation=twinkling" width="100%"/>
+</p>
