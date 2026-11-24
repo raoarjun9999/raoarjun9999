@@ -23,17 +23,14 @@
 
 <img align="right" width="340" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" alt="coding"/>
 
-```ts
-const arjun = {
-  role:        "Software Developer",
-  currentStack: ["React", "TypeScript", ".NET", "Microsoft Fabric"],
-  building:    ["Full-stack apps", "Dashboards", "Business automation"],
-  interests:   ["Power BI", "Microsoft Fabric", "AI-powered apps"],
-  achievements: "🏆 Multiple national-level hackathon wins",
-  mindset:     "Always learning. Always exploring.",
-  openTo:      "Collaborating on interesting projects 🤝",
-};
-```
+**👨‍💻 Software Developer** passionate about building modern, scalable and user-friendly web applications.
+
+- ⚛️ Currently working with **React, TypeScript, .NET** & **Microsoft Fabric**
+- 🚀 Building **full-stack apps, dashboards** & **business automation tools**
+- 📊 Interested in **Power BI**, data platforms & **AI-powered applications**
+- 🏆 **Hackathon winner** — multiple national-level achievements
+- 🌱 Always learning new technologies & exploring innovative ideas
+- 🤝 Open to **collaborating** on interesting projects — let's connect!
 
 <br clear="right"/>
 
@@ -78,12 +75,11 @@ const arjun = {
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.shion.dev/api?username=raoarjun9999&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&show_icons=true&bg_color=0d1117&title_color=36BCF7&icon_color=36BCF7" />
   <img height="170" src="https://github-readme-stats.shion.dev/api/top-langs/?username=raoarjun9999&theme=tokyonight&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=36BCF7" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=raoarjun9999&theme=tokyonight&hide_border=true&background=0d1117&ring=36BCF7&fire=FF6B6B&currStreakLabel=36BCF7" />
+  <img src="https://streak-stats.demolab.com/?user=raoarjun9999&theme=tokyonight&hide_border=true&background=0d1117&ring=36BCF7&fire=FF6B6B&currStreakLabel=36BCF7&currStreakNum=FFFFFF&sideNums=FFFFFF&sideLabels=36BCF7&dates=8B949E&stroke=30363D" />
 </p>
 
 <p align="center">
